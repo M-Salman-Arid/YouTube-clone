@@ -1,13 +1,21 @@
 body {
-    margin: 0px;
-    padding-top: 60px;
-    padding-bottom: 100px;
-    padding-left: 60px;
     font-family: Roboto, Arial, 'Times New Roman' ;
 }
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 14px;
     row-gap: 30px;
+}
+
+@media (max-width :950px ) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width : 800px ) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
 }

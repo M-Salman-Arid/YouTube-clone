@@ -1,11 +1,11 @@
 .sidebar {
     position: fixed;
-    top: 60px;
+    top: 0;
+    left: 4px;
     bottom: 0;
-    left: 0;
     width: 60px;
     background-color: white;
-    z-index: 1;
+    z-index: 100;
 }
 
 .sidebar-link {
@@ -18,7 +18,7 @@
 }
 
 .sidebar-link:hover{
-    background-color: rgb(223, 222, 222);
+    background-color: gray;
 }
 
 .sidebar-link img {
@@ -28,4 +28,11 @@
 .sidebar-link div {
     font-family: Roboto, Arial;
     font-size: 10px;
+}
+
+@media (max-width: 700px ) {
+    .sidebar {
+        position: absolute;
+        display: none;
+    }
 }

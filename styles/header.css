@@ -1,98 +1,74 @@
-.header {
+
+header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 55px;
-    margin-bottom: 15px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    align-items: center;
     background-color: white;
-    z-index: 100;
+    height: 55px;
 }
 
 .left-section {
+    width: 20%;
+    margin-left: 65px;
     display: flex;
     align-items: center;
 }
 
-.hamburger-menu {
-    height: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-}
 .youtube-logo {
-    height: 24px;
+    height: 26px;
     cursor: pointer;
 }
+
 .middel-section {
-    flex: 1;
-    margin-left: 70px;
-    margin-right: 34px;
-    max-width: 500px;
+    width: 60%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
 .search-bar {
-    flex: 1;
-    height: 36px;
+    width: 60%;
+    padding: 10px;
     font-size: 16px;
-    border: 1px solid rgb(192, 192, 192);
-    border-radius: 24px;
-    box-shadow: inset 1px 1px 2px rgba(0,0,0, 0.1);
-    padding-left: 4px;
-    outline: 1px solid rgb(65, 65, 225);
-}
-
-.search-bar::placeholder {
-    font-family: Roboto, Arial;
-    font-size: 16px;
-    padding-left: 6px;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 
 .search-button {
-    height: 38px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     background-color: rgb(240, 237, 237);
-    border: 1px solid rgb(192, 192, 192);
-    border-radius: 15px;
-    margin-left: 4px;
+    border: 1px solid gray;
+    border-radius: 16px;
     cursor: pointer;
 }
+
 .voice-search-button {
     height: 40px;
     width: 40px;
     background-color: rgb(240, 237, 237);
-    border: 1px solid rgb(192, 192, 192);
-    border-radius: 15px;
-    margin-left: 4px;
+    border: 1px solid gray;
+    border-radius: 16px;
     cursor: pointer;
 }
 
 .right-section {
-    width: 200px;
+    width: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-.upload-item-icon {
-    height: 25px;
-    cursor: pointer;
-}
-.yt-app-icon {
+.icon {
     height: 25px;
     cursor: pointer;
 }
 .notification-box {
     position: relative;
-}
-.notifications-icon {
-    height: 25px;
-    cursor: pointer;
 }
 .notification-count {
     position: absolute;
@@ -104,15 +80,21 @@
     border-radius: 12px;
     font-family: Roboto, Arial;
     font-size: 12px;
-    padding-left:  5px;
-    padding-right:  5px;
-    padding-top:  2px;
-    padding-bottom:  2px;
+    padding: 2px 5px;
     cursor: pointer;
 }
+
 .my-channel-icon {
     height: 40px;
-    margin-right: 12px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+@media (max-width : 700px ) {
+    .middel-section {
+        display: none;
+    }
+    .left-section {
+        margin: 0;
+    }
 }
